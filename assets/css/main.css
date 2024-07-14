@@ -701,6 +701,13 @@ input, select, textarea {
 			height: auto;
 		}
 
+		.player {
+			display: block;
+			margin: 2.5rem 0;
+			aspect-ratio: 16 / 9;
+			width: 100%;
+		}
+
 			.image.main img {
 				width: 100%;
 			}
@@ -711,6 +718,9 @@ input, select, textarea {
 				margin: 2rem 0;
 			}
 
+			/* .video.main {
+				width: ;
+			} */
 		}
 
 		@media screen and (max-width: 480px) {
@@ -718,6 +728,10 @@ input, select, textarea {
 			.image.main {
 				margin: 1.5rem 0;
 			}
+
+			/* .video.main {
+				width: 100%;
+			} */
 
 		}
 
