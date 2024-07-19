@@ -25,88 +25,76 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Joel Cox</h1>
-								<p>Welcome to the Sound Design work of Joel Cox.<br />
-								Below you will find 3 Projects as well as a series of Redesign Videos.</p>
+								<h2>Musc Projects Coming Soon<br />
+								Please Check Back Later</h2>
 							</div>
 						</div>
-						<nav>
+						<!-- <nav>
 							<ul>
-								<li><a href="#redesign">Redesign</a></li>
-								<li><a href="#project1">Cosy</a></li>
-								<li><a href="#project2">FPS</a></li>
-								<li><a href="#project3">Third Person</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
+								<li><a href="LandingPage.html">Intro</a></li>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<li><a href="#elements">Elements</a></li>
 							</ul>
-						</nav>
+						</nav> -->
 					</header>
 
 				<!-- Main -->
 					<div id="main">
 
 						<!-- Intro -->
-							<article id="redesign">
-								<h2 class="major">Redesign Videos</h2>
-								<span class="image main"><img src="images/gamesynth.png" alt="Tsugi Software's Gamesynth Engine Modular seection" /></span>
-								<p>Here you will find videos of redesign sound work that I have done for video game trailers, gameplay footage, and some scene work.</p>
-								<p>I use a range of methods and tools to create my sfx, from Tsugi's Gamesynth engine (pictured above) through to traditional sound recording and manipulation of samples inside my DAW.</p>
-								<p>My DAW's of choice are: Pro Tools, Ableton Live, and Reaper.</p>
-								
-								<iframe class="player" 					
-								src="https://www.youtube.com/embed/YZRqWArZrmE" title="Redesign Reel" 
-								frameborder="0" allow="accelerometer; autoplay; 
-								clipboard-write; encrypted-media; gyroscope; 
-								picture-in-picture; web-share" 
-								referrerpolicy="strict-origin-when-cross-origin" 
-								allowfullscreen></iframe>
-								<p>This was my original redesign video reel based on some of my favourite games and game genres.</p>
-								<p>Showcasing gameplay footage from Ori and The Will of the Wisps, Hollow Knight, Halo, Uncharted, and Destiny, this video displays some of my ability to go from unique sounds that aren't natural sounds, such as the sfx found in Ori and Hollow Knight, through to more realistic sounds such as gunfire, and natural environments.</p>
-								
-								<p>More work to Come</p>
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
 							</article>
 
-						<!-- Cosy RTS -->
-							<article id="project1">
-								<h2 class="major">Cosy RTS</h2>
-									<iframe class="player" 
-									src="https://www.youtube.com/embed/IoN-CQePelg?si=8vZ5JNDXJiQ0XWcA" title="YouTube video player" 
-									frameborder="0" allow="accelerometer; autoplay; 
-									clipboard-write; encrypted-media; gyroscope; 
-									picture-in-picture; web-share" 
-									referrerpolicy="strict-origin-when-cross-origin" 
-									allowfullscreen></iframe>
-								<p>Cozy RTS is what I titled this sound design project based on Epic's Cropout Sample Project for Unreal Engine 5.4.</p>
-								<p>When the project was first downloaded and opened it already contained all the audio assets required for the game, as well as the MetaSounds assets. My first task was looking at what sounds they had created and what actions required some form of sfx.</p>
-								<p>This was a fairly simple project with only the main actions requiring sfx, menu sfx, as well as music which was outside the scope of my design project.</p>
-								<span class="image main"><img src="CozyGameAssets/wwise project window.png" alt="Wwise Project Window" /></span>
-								<p>Once I had figured out what sounds I would be creating and implementing, I went to work quickly creating a range of simple sfx for the different actions. Oncec I had sounds I jumped into Wwise and began building the implementation for the game.</p>
-								<span class="image main"><img src="CozyGameAssets/wwise sfx assets.png" alt="Zoom in on the wwise sfx assets" /></span>
-								<p>As I wanted to keep the project fairly simple all assets were built under the Default Work Unit in the Actor-Mixer Hierarchy.</p>
-								<p>In the Default Work Unit I created a number of Random Containers inside of which I loaded 6 variations of each sound required in the game. Each of the Random Containers then had further randomisation enabled to give further variation to what the user would hear.</p>
-								<span class="image main"><img src="CozyGameAssets/wwise events.png" /></span>
-								<p>Once each of the Random Containers had been created and the added randomisation had been enabled, I then moved onto creating the events that would be used inside of Unreal Engine to trigger sfx during gameplay.</p>
-								<p>Again, keeping the project simple all events were named after the random container that they were associated with and placed inside of the Default Work Unit.</p>
-								<span class="image main"><img src="CozyGameAssets/wwise shared attenuation.png" /></span>
-								<p>Once the random containers and corresponding events were created, I quickly added in some global attenuation to be utilised by each of the events so that there wasn't a clash of sounds constantly.</p>
-								<span class="image main"><img src="CozyGameAssets/wwise soundbank.png" /></span>
-								<p>Finally, all this was added to a soundbank called "main" ready to be imported into Unreal Engine.</p>
-								<span class="image main"><img src="CozyGameAssets/UE_wwise assets.png" /></span>
-								<p>With the sound design process complete it was now time to implement these sfx into the game via Unreal Engine's Wwise plugin and API. Opening up the Wwise browser, I generated the soundbank and then linked these to UEAssets.</p>
-								<span class="image main"><img src="CozyGameAssets/UE_animationtrigger.png" /></span>
-								<p>With all of the events loaded correctly into the UE Project, it was then a matter of simply connecting the animations to the events using the AKEvent animnotify in UE's Animation window.</p>
-								<br />
-								<p>This was ultimately a fairly simple project where most of the assets and implementation could be constructed relatively quickly. However, it is a good example of how simple sound design, with simple implementation can still create interesting gameplay.</p>
-								</article>
-
-						<!-- FPS Zombies -->
-							<article id="project2">
-								<h2 class="major">FPS Zombie Survival Project</h2><br/>
-								<h2 class="major">Coming Soon</h2>
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Work</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
 							</article>
 
-						<!--Third Person Puzzler -->
-							<article id="project3">
-								<h2 class="major">Third Person Puzzler Game</h2><br />
-								<h2 class="major">Coming Soon</h2>	
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
 							</article>
 
 						<!-- Elements -->
@@ -355,7 +343,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; JoelCoxAudioDesign. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Joel Cox Audio Design Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
