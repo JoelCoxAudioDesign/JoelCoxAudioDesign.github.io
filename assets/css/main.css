@@ -193,7 +193,7 @@ input, select, textarea {
 			width: -moz-max-content;
 			width: -webkit-max-content;
 			width: -ms-max-content;
-			width: max-content;
+			width: fit-content;
 			padding-bottom: 0.5rem;
 			margin: 0 0 2rem 0;
 		}
@@ -227,45 +227,32 @@ input, select, textarea {
 	}
 
 	@media screen and (max-width: 736px){
-
 		h1 {
-			font-size: 1.25rem;
-			line-height: 1.4;
+			font-size: 2rem;
+			line-height: 1;
+			letter-spacing: 0.5rem;
 		}
-
+	
 		h2 {
-			font-size: 1.05em;
-			line-height: 1.5;
+			font-size: 1.2rem;
+			line-height: 1.1;
+			letter-spacing: 0.5rem;
 		}
 
 	}
  	@media screen and (max-width: 480px) {
-
 		h1 {
-			font-size: 1.05rem;
-			line-height: 1.4;
+			font-size: 1.85rem;
+			line-height: 0.85;
+			letter-spacing: 0.5rem;
 		}
-
+	
 		h2 {
-			font-size: .85em;
-			line-height: 1.5;
-		} 
-
+			font-size: 1rem;
+			line-height: 0.95;
+			letter-spacing: 0.5rem;
+		}
 	} 
-	@media screen and (max-width: 380px) {
-
-		h1 {
-			font-size: 0.85rem;
-			line-height: 1.4;
-		}
-
-		h2 {
-			font-size: .65em;
-			line-height: 1.5;
-		} 
-
-	}
-
 	sub {
 		font-size: 0.8rem;
 		position: relative;
