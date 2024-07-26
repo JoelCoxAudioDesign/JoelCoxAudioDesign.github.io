@@ -34,7 +34,7 @@
 								<li><a href="#redesign">Redesign</a></li>
 								<li><a href="#project1">Cosy</a></li>
 								<li><a href="#project2">FPS</a></li>
-								<li><a href="#project3">Third Person</a></li>
+								<!-- <li><a href="#project3">Third Person</a></li> -->
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -98,9 +98,74 @@
 								</article>
 
 						<!-- FPS Zombies -->
-							<article id="project2">
-								<h2 class="major">FPS Zombie Survival Project</h2><br/>
-								<h2 class="major">Coming Soon</h2>
+						<article id="project2">
+							<h2 class="major">FPS - Infected</h2>
+							<span class="image main"><img src="FPSGameAssets/Zombies.jpg" alt="Image of the Main Menu background."></span>
+							<p>Infected is a small project I built inside of Unreal Engine for the sole purpose of sound design. The idea was simple: build a first person shooter where I required player sfx, enemy sfx, and environment sfx. <br /> 
+							This is a wave based survival game so there was also the need for simple UI sfx to reiterate to the player that the next wave was coming, that they had died, or that they had won.</p>
+							<h2 class="major">Player SFX</h2>
+							<p>Once the game was built, which was a whole other learning experience, I moved on to the sound design process starting with player sounds. <br />
+							Under player sounds I knew I needed footsteps, breathing, grunts, and heartbeat. I also knew I would need weapon sfx but as this game only had 1 weapon I put these under player sounds.</p>
+							
+								<iframe class="player"
+								src="https://www.youtube.com/embed/RFnhnx7NhuY?si=KU2b0HB4unPWnBIH" title="YouTube video player" 
+								frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+								gyroscope; picture-in-picture; web-share" 
+								referrerpolicy="strict-origin-when-cross-origin" 
+								allowfullscreen></iframe>
+
+							<p>First up, footsteps. <br />
+							I have a wide library of footstep sounds that I can pull up and utilise. A lot of these are folley recordings of different shoes on different materials, however I decided for this game I would quickly generate some new sounds specifically.</p>
+							<p>I loaded up GameSynth, jumped into the footsteps generator, and plugged in some simple parameters. Just like that I was able to create a new set of footstep sounds for the player.</p>
+
+							<span class="image main"><img src="FPSGameAssets/GameSynth_Footsteps_Module_Player.png" /></span>
+
+							<p>I rendered out a 3 sec loop, imported this into Reaper and chopped up the individual steps so I could randomise them as the player ran.</p>
+							<p>Next was breathing sounds. <br />
+							Once again, I have access to a good variety of human breath sounds; male and female grunts, breathing, gasps, shouts, the list goes on. However much like the footsteps I wanted these to be original sounds and so got to work creating these.</p>
+							<p>I am lucky enough to have my own recording setup in my project studio, so recording myself and then editing this was not an issue. All I needed was a quick loop of heavy breathing that I could trigger once the player went below a certain health point, that would then loop until they either died, or their health rengenerated.</p>
+							<h2 class="major">Weapons</h2>
+							<p>For the players weapon, which is a basic handgun, I knew there were key sounds that would be required.<br />
+							First there is the gun blast; to big and your handgun sounds like a rocket launcher, to wimpy and you may has well be throwing rocks. Next is the reload sound, again if the sound is to complicated your handgun is already reloaded before the end of the sound.</p>
+							<p>Then there are the little sounds that add to the semi-realism of firing a weapon; mechanical noises from firing, bullet casings landing on the ground, clicks for when you try to fire and have no ammo. While these aren't essential, they do help with the overall soundscape and so I like to add them in.</p>
+
+							<span class="image main"><img src="FPSGameAssets/GameSynth_Modular_Gunshot_Player.png" /></span>
+
+							<p>Still inside GameSynth I jump across to the Modular patch where you can honestly create almost any sound you can imagine. For my needs there are several modules that make gun sfx really simple to make.</p>
+							<p>Gunshot is a module which does exactly that, allows you to customise the sound of that blast sound. How big the explosives are, how wide the gunshot is from 10cm right up to 10m, the distance from the gunshot.</p>
+							<span><img src="FPSGameAssets/GameSynth_Gunshot_Module_Player.png" /></span>
+							<p>Then you have Gun Foley and Bullet Casing, 2 modules which makes creating that perfect gun sound so much better. The beauty of GameSynth's modular is that you can have as many or as few modules as you like; for my gunshot I have 2 foley modules, 1 for the hammer down sound or click when you initialy pull the trigger, and then 1 for the reload action as the slide moves.</p>
+							<span><img src="FPSGameAssets/GameSynth_GunFoley_Module_Player.png" /></span><span><img src="FPSGameAssets/GameSynth_GunFoley2_Module_Player.png" /></span>
+							<p>The final sound is that simple bullet casing sound which lets me add as many or as few casings to drop as I need depending on my gun. Altogether I end up with a really nice sounding handgun, all that is left is to add in some variation parameters and to render it all out.</p>
+							<span><img src="FPSGameAssets/GameSynth_BulletCasing_Module_Player.png" /></span>
+
+							<h2 class="major">Zombie SFX</h2>
+
+							<p>Sound design for the zombies was relatively straightforward and simple.<br/>
+							I made the creative decision to forgo footstep sounds for the zombies, instead I focused on the growling, grunting, hoard sounds that you associate with zombies.<br />
+							For this I grabbed a number of my premade sounds, loaded them into a random container to be triggered as required. To give the feeling of there being lots of zombies around, the hoarde sound is rather full untill all zombies are killed.</p>
+							<p>Next was the attacking sounds.<br/>
+							The attack layers are made up of a growl from the zombie as they swing, then if the player is hit there is an impact sound. All of these have pitch variation and modulation added so that you don't get the same sound every time.<br/>
+							This also means, when you have a number of zombies around you and they are all attacking, it doesn't sound like one huge sound.</p>
+							
+							<h2 class="major">Environment and UI</h2>
+
+								<iframe class="player" 
+								src="https://www.youtube.com/embed/ZS4asYUL7fE?si=F1QieyCMT28VPn6l" title="YouTube video player" 
+								frameborder="0" allow="accelerometer; autoplay; 
+								clipboard-write; encrypted-media; gyroscope; 
+								picture-in-picture; web-share" 
+								referrerpolicy="strict-origin-when-cross-origin" 
+								allowfullscreen></iframe>
+
+							<p>While there is no background or surrounds in the level, I wanted to imagine the player was standing on a bridge in the middle of a city that was experiencing a zombie apocalypse.<br>
+							As a result I ended up utilising a combination of sounds to give that impression: the sound of a helicopter flying overhead throughout gameplay, sirens in the background, wind blowing, and the general sound of crowd commotion all layer together to form the main soundscape of the game.<br />
+							In implementing this I ensured that the sounds faded in and out, panned as the player turned around, and were randomised in triggering so that all sounds started and stopped at different times.</p>
+							<p>Finally the UI sounds were lite beeps and clicks and attached to their corresponding triggers.</p>
+
+							<p>This was a fun project to build as it not only gave me a project for sound design, but also helped to introduce me to the basics of building out a playable game, even if it was a simple one.</p>
+
+
 							</article>
 
 						<!--Third Person Puzzler -->
